@@ -20,8 +20,13 @@
 .App-link {
   color: #09d3ac;
 }
+.item {
+  max-width: 720px;
+  margin: 0 auto;
+}
 .item img {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+  transition: filter 0.2s;
 }
