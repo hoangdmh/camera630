@@ -30,8 +30,7 @@ class EffectSettings extends Component {
   //   });
   // }
 
-  render() {
-    //const { blur, brightness } = this.state;
+  render() {;
     const { status, blur, brightness, saturate } = this.props;
     //console.log('{...this.state} => ', this.props);
     return (

@@ -26,7 +26,7 @@ class App extends Component {
     });
   }
 
-  getValueBlur = (event) => {
+  getValueInput = (event) => {
     const target = event.target;
     const value = target.value;
     const name = target.name;
@@ -58,7 +58,7 @@ class App extends Component {
           >
           </ImageSection>
           <EffectSettings 
-            effectSettings={this.getValueBlur}
+            effectSettings={this.getValueInput}
             handleReset={this.handleReset}
             {...this.state}
           >
