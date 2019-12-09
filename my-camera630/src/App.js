@@ -14,8 +14,9 @@ class App extends Component {
     this.state = {
       idNumber: 122,
       status: false,
-      blur: null,
-      brightness: null
+      blur: 0,
+      brightness: 1,
+      saturate: 1
     }
   }
 
@@ -41,7 +42,8 @@ class App extends Component {
     this.setState({
       status: false,
       blur: null,
-      brightness: null
+      brightness: null,
+      saturate: null
     });
   }
 

@@ -32,8 +32,8 @@ class EffectSettings extends Component {
 
   render() {
     //const { blur, brightness } = this.state;
-    const { status, blur, brightness } = this.props;
-    console.log('{...this.state} => ', this.props);
+    const { status, blur, brightness, saturate } = this.props;
+    //console.log('{...this.state} => ', this.props);
     return (
       <>
         <style jsx global>
@@ -45,13 +45,17 @@ class EffectSettings extends Component {
             .item img {
               filter: brightness(${brightness});
             }
+            .item img {
+              -webkit-filter: saturate(${saturate});
+                filter: saturate(${saturate});
+            }
 
           `}
         </style>
 
         <div className="container mt-5">
           <div className="text-center">
-            <h2>{status ? '-webkit-filter' : ''} {blur} {brightness} </h2>
+            <h2>{status ? `-webkit-filter ${blur} ${brightness} ${saturate}` : ''} </h2>
           </div>
           <div className="row mb-4">
             <div className="col-4">
@@ -61,7 +65,7 @@ class EffectSettings extends Component {
                   <input
                     className="custom-range"
                     name="blur"
-                    type="range" step="1" min="0" max="10" defaultValue="0"
+                    type="range" step="1" min="0" max="10"
                     value={blur}
                     onChange={this.props.effectSettings}>
                   </input>
@@ -75,21 +79,27 @@ class EffectSettings extends Component {
                   <input 
                     className="custom-range" 
                     name="brightness"
-                    type="range" step="0.1" min="0" max="10" defaultValue="0"
+                    type="range" step="0.1" min="0" max="10"
                     value={brightness}
                     onChange={this.props.effectSettings}
                   />
                 </div>
               </div>
             </div>
-            {/* <div className="col-4">
+            <div className="col-4">
               <div className="row">
                 <div className="col-6">saturate():</div>
                 <div className="col-6">
-                  <input className="custom-range" type="range" step="0.1" min="0" max="10" />
+                  <input 
+                    className="custom-range" 
+                    name="saturate"
+                    type="range" step="0.1" min="0" max="10"
+                    value={saturate}
+                    onChange={this.props.effectSettings}
+                  />
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
 
           <div className="text-center">
