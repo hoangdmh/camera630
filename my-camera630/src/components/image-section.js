@@ -2,12 +2,12 @@
 import React, { Component } from 'react';
 
 class ImageSection extends Component {
-  constructor(props) {
-    super(props);
-    // this.state = {
-    //   idNumber: 112
-    // }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     idNumber: 112
+  //   }
+  // }
   // handleChangeImage = () => {
   //   this.setState((state) => {
   //     return {idNumber: state.idNumber + 1}
@@ -24,7 +24,7 @@ class ImageSection extends Component {
           <button type="button" className="btn btn-primary" onClick={this.props.handleChangeImage}>Change Image</button>
           <a 
             className="btn btn-primary ml-3" 
-            href="" 
+            href="/" 
             download={`https://picsum.photos/id/${idNumber}/720/405`}
           >
             Download image {this.props.idNumber}

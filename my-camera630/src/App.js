@@ -19,6 +19,9 @@ class App extends Component {
       saturate: 1
     }
   }
+  componentDidMount(){
+    this.handleChangeImage();
+  }
 
   handleChangeImage = () => {
     this.setState((state) => {

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
 class EffectSettings extends Component {
-  constructor(props) {
-    super(props);
-    // this.state = {
-    //   status: false,
-    //   blur: 0,
-    //   brightness: 0
-    // }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     status: false,
+  //     blur: 0,
+  //     brightness: 0
+  //   }
+  // }
 
   // getValueBlur = (event) => {
   //   const target = event.target;
@@ -35,7 +35,7 @@ class EffectSettings extends Component {
     //console.log('{...this.state} => ', this.props);
     return (
       <>
-        <style jsx global>
+        <style jsx>
           {`
             .item img {
               -webkit-filter: blur(${blur}px);
